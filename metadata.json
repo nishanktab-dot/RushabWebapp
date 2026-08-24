@@ -1,0 +1,6 @@
+{
+  "name": "Rushabh Trading Company",
+  "description": "Wholesale Office & School Stationery Supplier, Bengaluru",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
