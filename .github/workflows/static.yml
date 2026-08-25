@@ -29,20 +29,18 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         
-      # 1. Setup Node.js (Required for React)
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'npm'
+          # (Removed the cache requirement here)
           
-      # 2. Install dependencies & Build the project
+      # Changed from 'npm ci' to 'npm install' so it doesn't need a lock file
       - name: Install dependencies
-        run: npm ci
+        run: npm install
       - name: Build
         run: npm run build
         
-      # 3. Upload the 'dist' folder instead of '.'
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
